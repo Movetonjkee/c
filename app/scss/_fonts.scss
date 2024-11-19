@@ -1,0 +1,9 @@
+@import '_mixins/font-face';
+
+@include font-face('nunito', '../fonts/NunitoSans_10pt-Regular', 400);
+@include font-face('nunito', '../fonts/NunitoSans_10pt-SemiBold', 600);
+@include font-face('nunito', '../fonts/NunitoSans_10pt-Bold', 700);
+@include font-face('great', '../fonts/good-vibes-pro', 400);
+@include font-face('cormorant', '../fonts/Cormorant-Medium', 500);
+@include font-face('cormorant', '../fonts/Cormorant-SemiBold', 600);
+@include font-face('cormorant', '../fonts/Cormorant-Bold', 700);

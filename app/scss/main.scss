@@ -1,0 +1,107 @@
+@use 'sass:math';
+@import '_mixins/breakpoints';
+@import 'vars';
+@import 'fonts';
+@import 'libs';
+
+::placeholder {
+  color: $white;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+html {
+  font-size: 16px;
+
+  // @include media-small {
+  //   font-size: 14px;
+  // }
+}
+
+body {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  min-width: 320px;
+  position: relative;
+  font-family: $userfont;
+  overflow-x: hidden;
+  color: $titleColor;
+}
+
+input,
+textarea {
+  outline: none;
+  &:focus:required:invalid {
+    border-color: red;
+  }
+  &:required:valid {
+    border-color: green;
+  }
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  transition: 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $accent;
+  }
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.container {
+  max-width: rem(1450);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 rem(30);
+
+  @include media-medium {
+    padding: 0 rem(20);
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@import './_common';
